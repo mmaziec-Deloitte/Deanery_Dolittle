@@ -16,7 +16,7 @@ public class Main {
         UserDialog.whatToDo();
         UserDialog.dialog(studentList);
 
-
+        //TODO unnecessary empty lines
 
     }
 }

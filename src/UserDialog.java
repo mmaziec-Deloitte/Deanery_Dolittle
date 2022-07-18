@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class UserDialog {
 
-    static DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+    static DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss"); //TODO this could be private and better not use the variables names that are some shortcuts and don't mean anything
     static LocalDateTime now = LocalDateTime.now();
 
 
@@ -24,16 +24,16 @@ public class UserDialog {
                 case 2:
                     System.out.println("-- Please type in id to search:\n");
                     int choice2 = scanner.nextInt();
-                    for (Student student: studentList) {
+                    for (Student student: studentList) { //TODO good that you've used the collection here -> but maybe it would be nicer to use the Map here? With ids as keys (searching will be faster and easier)
                         if(choice2 == student.getId()){
                             UserDialog.showStudent(student);
                             System.out.println("--------------------------------------------------------------------\n");
                         }
-                    }
+                    } //TODO and what if the student is not found?
                     UserDialog.whatToDo();
                     break;
                 case 3:
-                    String choice3, choice4, choice6;
+                    String choice3, choice4, choice6; //TODO declaring in one line is not the best practice
                     int choice5;
                     System.out.println("-- Please type in the first name:");
                     choice3 = scanner.next();
@@ -96,6 +96,7 @@ public class UserDialog {
 
     }
 
+    //TODO this is a nice idea ;)
     public static void whatToDo(){
         System.out.println("\n\n-- What would you like to do?\n" +
                 "-- 1. Show all the students' details\n" +
@@ -105,7 +106,10 @@ public class UserDialog {
                 "-- 5. Exit\n");
     }
 
+    //TODO the report was supposed to be the output of the serve method, but maybe I didn't specify it well in the instruction..
     public static void showStudent(Student student){
+        //TODO when you write the spaces like that -> the report would not be properly formatted, when a first name and last name have different lengths
+        //TODO it is better to use the String format with the %<number>s fixed length to set the maximum length of a string that would be filled with spaces -> this way the table would look like a table not just some random "|" characters
         System.out.println("--------------------------------------------------------------------\n" +
                            "                       STUDENT <" + student.getId() + ">\n\n" +
                            "-- First Name: |   " + student.getFirstName() + "   |\n" +

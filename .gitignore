@@ -1,0 +1,5 @@
+/.idea/
+/out/
+/Deanery_Dolittle.iml
+
+# the gitignore file should be used so that the .idea, out and .iml files are not included in the repo

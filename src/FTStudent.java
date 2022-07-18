@@ -1,5 +1,6 @@
 import java.util.Objects;
 
+//TODO same as for PTStudent
 public class FTStudent extends Student {
 
     public FTStudent(String firstName, String secondName, int id) {

@@ -4,7 +4,7 @@ public class Student {
     private String secondName;
     private int id;
 
-
+    //TODO formatting - unnecessary empty line
     public Student (String firstName, String secondName, int id) {
         this.firstName = firstName;
         this.secondName = secondName;
@@ -35,6 +35,6 @@ public class Student {
         this.id = id;
     }
 
-    public void serve(String room, int hour){}
+    public void serve(String room, int hour){} //TODO if you wanted the children to override this method -> it should be abstract and the Student class should be abstract as well
 
 }
